@@ -74,7 +74,7 @@
     /*Estilo de Bienvenido*/
     .header .Bienvenido {
         position: absolute;
-        height: 80px;
+        height: 100px;
         width: 250px;
         border-radius: 20px;
         background-color: rgb(68, 66, 66);
@@ -84,6 +84,21 @@
         padding-top: 25px;
         color: white;
         text-shadow: none;
+    }
+    .Boton-rojo {
+        font-weight: bold;
+        font-size: 13px;
+        background-color: red;
+        border: none;
+        margin: 8px;
+        padding: 10px;
+    }
+    .Boton-rojo:hover {
+        background-color: white;
+        color: red;
+        border: none;
+        cursor: pointer;
+        transition-duration: 0.7s;
     }
     /*Estilo del Pie de Pagina */
     .footer {
@@ -136,13 +151,31 @@
 @media screen and (min-width:480px) and (max-width:780px) {
     /*Estilo de Bienvenido*/
     .header .Bienvenido {
+        display: flex;
         background-color: rgb(68, 66, 66);
     }
     .Bienvenido p {
+        flex: 70%;
         font-size: 15px;
         padding: 10px;
         color: white;
         text-shadow: none;
+    }
+    .Boton-rojo {
+        flex: 20%;
+        font-weight: bold;
+        font-size: 13px;
+        background-color: red;
+        border: none;
+        margin: 8px;
+        padding: 10px;
+    }
+    .Boton-rojo:hover {
+        background-color: white;
+        color: red;
+        border: none;
+        cursor: pointer;
+        transition-duration: 0.7s;
     }
     /*Barra de navegacion*/
     .navbar {
@@ -213,13 +246,31 @@
 @media screen and (max-width:480px) {
     /*Estilo de Bienvenido*/
     .header .Bienvenido {
+        display: flex;
         background-color: rgb(68, 66, 66);
     }
     .Bienvenido p {
+        flex: 60%;
         font-size: 15px;
         padding: 10px;
         color: white;
         text-shadow: none;
+    }
+    .Boton-rojo {
+        flex: 30%;
+        font-weight: bold;
+        font-size: 13px;
+        background-color: red;
+        border: none;
+        margin: 8px;
+        padding: 10px;
+    }
+    .Boton-rojo:hover {
+        background-color: white;
+        color: red;
+        cursor: pointer;
+        border: none;
+        transition-duration: 0.7s;
     }
     /*Barra de navegacion*/
     .navbar {

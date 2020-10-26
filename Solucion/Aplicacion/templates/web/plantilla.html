@@ -15,11 +15,18 @@
 </head>
 
 <body>
+    <!--Scripts-->
+    <script>
+        function cerrarSesion() {
+            location.href = '/logout_vista/';
+        }
+    </script>
     <!-- Cabecera-->
     <div class="header">
         {% if user.is_authenticated %}
         <div class="Bienvenido">
             <p>Bienvenido: {{user.first_name}} {{user.last_name}}</p>
+            <button onclick="cerrarSesion()" class="Boton-rojo">Cerrar sesion</button>
         </div>
         {% endif %}
         <img src="{% static 'img/LogoReal.jpg' %}" alt="">
@@ -38,7 +45,6 @@
 
                 {% if user.is_authenticated %}
                 <li><a href="{% url 'PROD' %}">PRODUCTOS</a> </li>
-                <li><a href="{% url 'LOGO' %}">CERRAR SESION</a> </li>
                 {% else %}
                 <li><a href="{% url 'FORM' %}">REGISTRARSE</a> </li>
                 <li><a href="{% url 'LOGI' %}">INICIAR SESION</a> </li>
