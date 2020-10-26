@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login de acceso</title>
+    <link rel="stylesheet" href="{% static 'css/estilo_formulario.css' %}">
+</head>
+
+<body>
+    <!--Contenido-->
+    <form action="{% url 'LOGI' %}" method="POST" class="formulario-registro" onsubmit="">
+        {% csrf_token %}
+        <script>
+            function volver() {
+                location.href = '/';
+            }
+        </script>
+        <h1 class="formulario-titulo">Login de acceso</h1>
+
+        <div class="contenido">
+
+            <div class="dato">
+                <p>Nombre de usuario:</p>
+                <input type="text" id="txtUsuario" name="txtUsuario" required>
+            </div>
+            <div class="dato">
+                <p>Contraseña:</p>
+                <input type="password" id="txtPass" name="txtPass" required>
+            </div>
+
+            <input type="submit" value="Ingresar" class="btn">
+            <button onclick="volver()" class="btn">Volver</button>
+        </div>
+    </form>
+    <section>
+        <div style="text-align: center; color: red; font-size: 20px; ">
+            {{msg}}
+        </div>
+    </section>
+</body>
+
+</html>

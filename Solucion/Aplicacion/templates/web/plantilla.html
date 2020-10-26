@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Titulo de la pagina-->
+    <title>
+        {% block titulo %} {% endblock titulo %}
+    </title>
+    <!--Hoja de estilo-->
+    {% block estilos %} {% endblock estilos %}
+    <link rel="stylesheet" href="{% static 'css/header_navbar_footer.css' %}">
+</head>
+
+<body>
+    <!-- Cabecera-->
+    <div class="header">
+        {% if user.is_authenticated %}
+        <div class="Bienvenido">
+            <p>Bienvenido: {{user.first_name}} {{user.last_name}}</p>
+        </div>
+        {% endif %}
+        <img src="{% static 'img/LogoReal.jpg' %}" alt="">
+        <h2>LAVADOS MIGUEL</h2>
+    </div>
+
+    <!-- Barra de navegación-->
+    <div class="navbar">
+        <input type="checkbox" name="" id="btn-menu">
+        <label for="btn-menu"><img src="{% static 'img/menu.png' %}" alt="" width="30px" height="30px"></label>
+        <nav class="menu">
+            <ul>
+                <li><a href="{% url 'INIC' %}">INICIO</a> </li>
+                <li><a href="{% url 'NOSO' %}">NOSOTROS</a> </li>
+                <li><a href="{% url 'GALE' %}">GALERIA</a> </li>
+
+                {% if user.is_authenticated %}
+                <li><a href="{% url 'PROD' %}">PRODUCTOS</a> </li>
+                <li><a href="{% url 'LOGO' %}">CERRAR SESION</a> </li>
+                {% else %}
+                <li><a href="{% url 'FORM' %}">REGISTRARSE</a> </li>
+                <li><a href="{% url 'LOGI' %}">INICIAR SESION</a> </li>
+                {% endif %}
+
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Contenido Principal-->
+    {% block contenido %} {% endblock contenido %}
+
+    <!-- Pie de pagina-->
+    <div class="footer ">
+
+        <div class="contactos ">
+            <h3>Contactanos:</h3>
+            <p>Telefono: 290-930-2000</p>
+            <p>Correo: LavadosAutoMiguel@gmail.com</p>
+        </div>
+
+        <div class="direccion ">
+            <h3>Dirección:</h3>
+            <ul>
+                <li>Avenida Concha Y Toro, Av. San Carlos 1340, Puente Alto, Región Metropolitana</li>
+                <li>Sto Domingo 67, Puente Alto, Región Metropolitana</li>
+                <li>San Pedro 838-878, Puente Alto, Región Metropolitana</li>
+                <li>Marcos Pérez 1223, Puente Alto, Región Metropolitana</li>
+                <li>Av. Ejército Libertador 569, Puente Alto, Región Metropolitana</li>
+            </ul>
+        </div>
+
+        <div class="horario ">
+            <h3>Horario de atencion:</h3>
+            <h4>Lunes a Viernes:</h4>
+            <p>9:00 a 19:00</p>
+            <h4>Sabados y Domingos:</h4>
+            <p>9:00 a 21:00</p>
+        </div>
+
+
+        <div class="desarrollador ">
+            <h3>Desarrollado por:</h3>
+            <p><a href=" ">www.super-programadores.com</a></p>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

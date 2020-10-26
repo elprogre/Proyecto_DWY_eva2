@@ -1,0 +1,124 @@
+{% extends "web/plantilla.html" %}
+{% load static %}
+    {% block titulo %}
+        Inicio
+    {% endblock titulo %}
+    
+    {% block estilos %}
+        <!--Hoja de estilo-->
+        <link rel="stylesheet" href="{% static 'css/estilo_pagina_principal.css' %}">
+    {% endblock estilos %}
+    
+
+
+    {% block contenido %}
+        <!--Carrusel-->
+    <div class="carrusel">
+        <ul>
+            {% for item in lista_slider %}
+                <li><img src="{{item.imagen.url}}" alt=" ">
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <!-- Contenido Principal-->
+    <div class="contenido ">
+        <!-- Contenido web-->
+        <div class="section ">
+            <h1>Servicios</h1>
+            <div class="servicios ">
+                <div class="margen ">
+                    <div class="precios">
+                        <h3>Lavado Exterior</h3>
+                        <img src="{% static 'img/Lavado Exterior.jpg' %}" alt=" ">
+                        <p id="Precio">Autos $6.000</p>
+                        <p id="Precio">Camionetas y Suv $7.000</p>
+                        <p id="Precio">Camionetas XL $8000</p>
+                        <p>Este servicio cubre todo el exterior del vehiculo</p>
+                    </div>
+                </div>
+
+                <div class="margen ">
+                    <div class="precios">
+                        <h3>Lavado Interior</h3>
+                        <img src="{% static 'img/Lavado Interior.jpg' %}">
+                        <p id="Precio">Autos $6.000</p>
+                        <p id="Precio">Camionetas y Suv $7.000</p>
+                        <p id="Precio">Camionetas XL $8.000</p>
+                        <p>Este servicio incluye lavado tanto interior como exterior</p>
+                    </div>
+                </div>
+
+                <div class="margen ">
+                    <div class="precios">
+                        <h3>Lavado Completo</h3>
+                        <img src="{% static 'img/Lavado Completo.jpg' %}">
+                        <p id="Precio">Autos $11.000</p>
+                        <p id="Precio">Camionetas y Suv $13.000</p>
+                        <p id="Precio">Camionetas XL $15.000</p>
+                        <p>Este servicio incluye lavado tanto del interior como del exterior</p>
+                    </div>
+                </div>
+
+                <div class="margen ">
+                    <div class="precios ">
+                        <h3>Limpieza de tapiz</h3>
+                        <img src="{% static 'img/Limpieza Tapiz.jpg' %}">
+                        <p id="Precio">Autos $18.000</p>
+                        <p id="Precio">Camionetas y Suv $18.000</p>
+                        <p id="Precio">Camionetas XL $20.000</p>
+                        <p>Este servicio incluye una limpieza completa con aspiradora para tapizes y alfombras</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Comentarios clientes-->
+        <div class="aside ">
+            <h1>Comentarios de clientes</h1>
+            <div class="comentariosTodos ">
+                <div class="comentario ">
+                    <h3>Felipe Andres</h3>
+                    <img src="{% static 'img/Persona 1.jfif' %}" alt=" ">
+                    <h2>"Son profesionales "</h2>
+                </div>
+
+                <div class="comentario ">
+                    <h3>Camilo Suares</h3>
+                    <img src="{% static 'img/Persona 2.jfif' %}" alt=" ">
+                    <h2>"Rapidos y eficientes "</h2>
+                </div>
+
+                <div class="comentario ">
+                    <h3>Fernanda Rojas</h3>
+                    <img src="{% static 'img/Persona 3.jpg' %}" alt=" ">
+                    <h2>"Tienen buenos precios y el servicio es impecable "</h2>
+                </div>
+
+                <div class="comentario ">
+                    <h3>Oscar sepulveda</h3>
+                    <img src="{% static 'img/Persona 4.jpeg' %}" alt=" ">
+                    <h2>"horarios flexibles"</h2>
+                </div>
+
+                <div class="comentario ">
+                    <h3>Francisca Peiro</h3>
+                    <img src="{% static 'img/Persona 5.jfif' %}" alt=" ">
+                    <h2>"10 de 10 su servicio"</h2>
+                </div>
+
+                <div class="comentario ">
+                    <h3>Emilio Jose</h3>
+                    <img src="{% static 'img/Persona 6.jpg' %}" alt=" ">
+                    <h2>"Muy atentos a lo que uno pide"</h2>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    {% endblock contenido %}
+    
+   

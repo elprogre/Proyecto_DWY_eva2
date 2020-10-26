@@ -1,0 +1,407 @@
+/*Estilos de header, navbar y footer */
+
+@import url(header_navbar_footer.css);
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+/*Media query */
+
+
+/*Pantalla Escritorio*/
+
+@media screen and (min-width:780px) and (max-width:2000px) {
+    /*Estilo del carrusel*/
+    .carrusel {
+        width: 100%;
+        margin: auto;
+        overflow: hidden;
+    }
+    .carrusel ul {
+        display: flex;
+        padding: 0;
+        width: 400%;
+        animation: cambio 20s infinite alternate;
+    }
+    .carrusel ul:hover {
+        cursor: pointer;
+    }
+    .carrusel li {
+        width: 100%;
+        list-style: none;
+    }
+    .carrusel img {
+        width: 100%;
+        height: 600px;
+        object-fit: cover;
+    }
+    /*Solo 4 imagenes en el slider ni mas ni menos*/
+    @keyframes cambio {
+        0% {
+            margin-left: 0%;
+        }
+        20% {
+            margin-left: 0%;
+        }
+        25% {
+            margin-left: -100%;
+        }
+        45% {
+            margin-left: -100%;
+        }
+        50% {
+            margin-left: -200%;
+        }
+        70% {
+            margin-left: -200%;
+        }
+        75% {
+            margin-left: -300%;
+        }
+        100% {
+            margin-left: -300%;
+        }
+    }
+    /*Estilos del contenido principal*/
+    /*Estilos del section*/
+    .contenido h1 {
+        padding: 20px;
+    }
+    .section {
+        text-align: center;
+    }
+    .section h1 {
+        /*Titulo Servicio*/
+        background-color: rgb(68, 66, 66);
+        color: white;
+    }
+    .section img {
+        height: 180px;
+        width: 260px;
+        margin: 5px;
+    }
+    .servicios {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .margen {
+        flex: 50%;
+    }
+    .precios {
+        border-radius: 4px;
+        border: 1px solid #eee;
+        background-color: #fafafa9c;
+        margin: 5% 15% 5% 15%;
+    }
+    .precios h3 {
+        padding: 10px 0px;
+        background-color: rgb(68, 66, 66);
+        color: white;
+    }
+    .precios h3:hover {
+        transition-duration: 0.7s;
+        background-color: #4f9deb;
+        color: black;
+        cursor: pointer;
+    }
+    #Precio {
+        margin: 5px;
+        font-weight: bold
+    }
+    /*Estilos de omentarios*/
+    .aside {
+        text-align: center;
+    }
+    .aside h1 {
+        /*Titulo Comentarios*/
+        background-color: rgb(68, 66, 66);
+        color: white;
+    }
+    .comentariosTodos {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 20px;
+    }
+    .comentario {
+        border-radius: 4px;
+        border: 1px solid #eee;
+        background-color: #fafafa9c;
+        flex: 30%;
+        margin: 1%;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .comentario img {
+        height: 200px;
+        width: 200px;
+        border-radius: 100px;
+        padding: 10px;
+    }
+    .comentario h3 {
+        background-color: rgb(68, 66, 66);
+        color: white;
+    }
+}
+
+
+/*Pantalla tablet*/
+
+@media screen and (min-width:480px) and (max-width:780px) {
+    /*Estilo del carrusel*/
+    .carrusel {
+        width: 100%;
+        margin: auto;
+        overflow: hidden;
+    }
+    .carrusel ul {
+        display: flex;
+        width: 400%;
+        padding: 0;
+        animation: cambio 20s infinite alternate;
+    }
+    .carrusel ul:hover {
+        cursor: pointer;
+    }
+    .carrusel li {
+        width: 100%;
+        list-style: none;
+    }
+    .carrusel img {
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+    }
+    @keyframes cambio {
+        0% {
+            margin-left: 0%;
+        }
+        20% {
+            margin-left: 0%;
+        }
+        25% {
+            margin-left: -100%;
+        }
+        45% {
+            margin-left: -100%;
+        }
+        50% {
+            margin-left: -200%;
+        }
+        70% {
+            margin-left: -200%;
+        }
+        75% {
+            margin-left: -300%;
+        }
+        100% {
+            margin-left: -300%;
+        }
+    }
+    /*Estilos del contenido principal*/
+    /*Estilos del section*/
+    .contenido h1 {
+        padding: 20px;
+    }
+    .section {
+        text-align: center;
+    }
+    .section h1 {
+        /*Titulo Servicio*/
+        background-color: rgb(68, 66, 66);
+        color: white;
+    }
+    .section img {
+        height: 100%;
+        width: 100%;
+    }
+    .servicios {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .margen {
+        flex: 50%;
+    }
+    .precios {
+        border-radius: 4px;
+        border: 1px solid #eee;
+        background-color: #fafafa;
+        margin: 15% 15% 15% 15%;
+    }
+    .precios h3 {
+        padding: 10px 0px;
+        background-color: rgb(68, 66, 66);
+        color: white;
+    }
+    .precios h3:hover {
+        background-color: #4f9deb;
+        color: black;
+        cursor: pointer;
+    }
+    #Precio {
+        margin: 5px;
+        font-weight: bold
+    }
+    /*Estilos de comentarios*/
+    .aside {
+        text-align: center;
+    }
+    .aside h1 {
+        /*Titulo Comentarios*/
+        background-color: rgb(68, 66, 66);
+        color: white;
+    }
+    .comentariosTodos {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 20px;
+    }
+    .comentario {
+        flex: 40%;
+        border-radius: 4px;
+        border: 1px solid #eee;
+        background-color: #fafafa9c;
+        margin: 1%;
+    }
+    .comentario img {
+        height: 200px;
+        width: 200px;
+        border-radius: 100px;
+        padding: 10px;
+    }
+    .comentario h3 {
+        background-color: rgb(68, 66, 66);
+        color: white;
+    }
+}
+
+
+/*Tamaño de movil*/
+
+@media screen and (max-width:480px) {
+    /*Estilo del carrusel*/
+    .carrusel {
+        width: 100%;
+        margin: auto;
+        overflow: hidden;
+    }
+    .carrusel ul {
+        display: flex;
+        width: 400%;
+        padding: 0;
+        animation: cambio 20s infinite alternate;
+    }
+    .carrusel ul:hover {
+        cursor: pointer;
+    }
+    .carrusel li {
+        width: 100%;
+        list-style: none;
+    }
+    .carrusel img {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+    }
+    @keyframes cambio {
+        0% {
+            margin-left: 0%;
+        }
+        20% {
+            margin-left: 0%;
+        }
+        25% {
+            margin-left: -100%;
+        }
+        45% {
+            margin-left: -100%;
+        }
+        50% {
+            margin-left: -200%;
+        }
+        70% {
+            margin-left: -200%;
+        }
+        75% {
+            margin-left: -300%;
+        }
+        100% {
+            margin-left: -300%;
+        }
+    }
+    /*Estilos del contenido principal*/
+    /*Estilos del section*/
+    .contenido h1 {
+        padding: 20px;
+    }
+    .section {
+        text-align: center;
+    }
+    .section h1 {
+        /*Titulo Servicio*/
+        background-color: rgb(68, 66, 66);
+        color: white;
+    }
+    .section img {
+        height: 100%;
+        width: 100%;
+    }
+    .servicios {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .margen {
+        flex: 100%;
+    }
+    .precios {
+        border-radius: 4px;
+        border: 1px solid #eee;
+        background-color: #fafafa;
+        margin: 15% 15% 15% 15%;
+    }
+    .precios h3 {
+        padding: 10px 0px;
+        background-color: rgb(68, 66, 66);
+        color: white;
+    }
+    .precios h3:hover {
+        background-color: #4f9deb;
+        color: black;
+        cursor: pointer;
+    }
+    #Precio {
+        margin: 5px;
+        font-weight: bold
+    }
+    /*Estilos de omentarios*/
+    .aside {
+        text-align: center;
+    }
+    .aside h1 {
+        /*Titulo Comentarios*/
+        background-color: rgb(68, 66, 66);
+        color: white;
+    }
+    .comentariosTodos {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 20px;
+    }
+    .comentario {
+        flex: 100%;
+        border-radius: 4px;
+        border: 1px solid #eee;
+        background-color: #fafafa9c;
+        margin: 1%;
+    }
+    .comentario img {
+        height: 200px;
+        width: 200px;
+        border-radius: 100px;
+    }
+    .comentario h3 {
+        background-color: rgb(68, 66, 66);
+        color: white;
+    }
+}

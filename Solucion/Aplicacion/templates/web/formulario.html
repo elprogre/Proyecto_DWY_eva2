@@ -1,0 +1,56 @@
+{% extends "web/plantilla.html" %} {% load static %} {% block titulo %} Formulario {% endblock titulo %} {% block estilos %}
+<link rel="stylesheet" href="{% static 'css/estilo_formulario.css' %}"> {% endblock estilos %} {% block contenido %}
+<!--JavaScript-->
+<script src="{% static 'js/scripts.js' %}"></script>
+<script src="{% static 'js/cliente.js' %}"></script>
+
+<!--Contenido-->
+<form action="" method="POST" class="formulario-registro" onsubmit="return validarTodo()">
+    {% csrf_token %}
+    <h1 class="formulario-titulo">Creación de cuenta</h1>
+
+    <div class="contenido">
+        <div class="dato">
+            <p>Rut:</p>
+            <input type="text" id="txtRut" name="txtRut" placeholder="ej: 09123321-K" minlength="9" maxlength="10" required>
+        </div>
+        <div class="dato">
+            <p>Nombre:</p>
+            <input type="text" id="txtNombre" name="txtNombre" placeholder="" minlength="3" maxlength="80" required>
+        </div>
+        <div class="dato">
+            <p>Apellido:</p>
+            <input type="text" id="txtApellido" name="txtApellido" placeholder="" minlength="3" maxlength="80" required>
+        </div>
+        <div class="dato">
+            <p>Email:</p>
+            <input type="email" id="txtEmail" name="txtEmail" required>
+        </div>
+        <div class="dato">
+            <p>Fecha de nacimiento:</p>
+            <input type="date" id="txtFecha" name="txtFecha" required>
+        </div>
+        <div class="dato">
+            <p>Nombre de usuario:</p>
+            <input type="text" id="txtUsuario" name="txtUsuario" minlength="8" maxlength="16" required>
+        </div>
+        <div class="dato">
+            <p>Contraseña:</p>
+            <input type="password" id="txtPass" name="txtPass" minlength="8" maxlength="16" required>
+        </div>
+        <div class="dato">
+            <p>Repetir Contraseña:</p>
+            <input type="password" id="txtPass2" name="txtPass2" minlength="8" maxlength="16" required>
+        </div>
+
+        <input type="submit" value="Crear" class="btn">
+        <input type="reset" value="Limpiar" class="btn">
+
+    </div>
+</form>
+<section>
+    <div style="text-align: center; color: brown; font-size: 35px;">
+        {{msg}}
+    </div>
+</section>
+{% endblock contenido %}

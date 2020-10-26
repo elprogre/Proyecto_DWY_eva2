@@ -1,0 +1,19 @@
+{% extends "web/plantilla.html" %} {% load static %} {% block titulo %} Galeria {% endblock titulo %} {% block estilos %}
+<link rel="stylesheet" href="{% static 'dist/css/lightbox.min.css' %}">
+<link rel="stylesheet" href="{% static 'css/estilo_galeria.css' %}"> {% endblock estilos %} {% block contenido %}
+<!-- Contenido -->
+<h1>Galeria</h1>
+<div class="contenido">
+    {% for item in lista_fotos %}
+    <div class="foto">
+        <a href="{{item.imagen.url}}" data-lightbox="autos" data-title="{{item.nombre}}">
+            <img src="{{item.imagen.url}}" alt=" ">
+        </a>
+    </div>
+    {% endfor %}
+
+</div>
+
+<!-- Script para ajustar las imagenes-->
+<script src="{% static 'dist/js/lightbox-plus-jquery.min.js' %}"></script>
+{% endblock contenido %}

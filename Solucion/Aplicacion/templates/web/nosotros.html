@@ -1,0 +1,73 @@
+{% extends "web/plantilla.html" %}
+{% load static %}
+    {% block titulo %}
+        Nosotros
+    {% endblock titulo %}
+
+    {% block estilos %}
+        <!--Hoja de estilo-->
+        <link rel="stylesheet" href="{% static 'css/estilo_nosotros.css' %}">
+    {% endblock estilos %}
+
+    {% block contenido %}
+        <!-- Contenido -->
+        <div class="contenido">
+            <div class="section_principal">
+            
+                {% for item in lista_texto %}
+                    <h1>¿Quiénes somos?</h1>
+                    <div class="quienes_somos">
+                        <img src="{% static 'img/gal_auto2.jpg' %}" alt="">
+                        <p>
+                            {{item.mision}}
+                        </p>
+
+                    </div>
+                    <h1>Nuestra misión y visión</h1>
+                    <div class="mision_vision">
+                        <p>
+                            {{item.vision}}
+                        </p>
+                        <img src="{% static 'img/gal_auto8.jpg' %}" alt="">
+                    </div>
+                {% endfor %}
+
+
+            </div>
+
+            <!--Datos-->
+            <div class="section">
+                <h1>Contactos</h1>
+                <div class="telefono">
+                    <h3>Telefonos:</h3>
+                    <p>+56 (2) 8839 8279</p>
+                    <p>+56 (2) 2899 9384</p>
+                </div>
+
+                <div class="correo">
+                    <h3>Correo electronico:</h3>
+                    <p>lavados-autos-miguel@gmail.com</p>
+                </div>
+
+                <div class="direcciones">
+                    <h3>Direcciones:</h3>
+                    <ul>
+                        <li>Avenida Concha Y Toro, Av. San Carlos 1340, Puente Alto, Región Metropolitana</li>
+                        <li>Sto Domingo 67, Puente Alto, Región Metropolitana</li>
+                        <li>San Pedro 838-878, Puente Alto, Región Metropolitana</li>
+                        <li>Marcos Pérez 1223, Puente Alto, Región Metropolitana</li>
+                        <li>Av. Ejército Libertador 569, Puente Alto, Región Metropolitana</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Mapa -->
+            <div class="mapa">
+                <h3>Ubicacion:</h3>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3323.266768026587!2d-70.58078458479675!3d-33.59838218073181!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662d7037854df81%3A0x893f58a1479b8f82!2sDuoc%20UC%3A%20Sede%20Puente%20Alto!5e0!3m2!1ses!2scl!4v1600629019233!5m2!1ses!2scl"
+                    width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" id="mapita"></iframe>
+            </div>
+        </div>
+    {% endblock contenido %}
+
+

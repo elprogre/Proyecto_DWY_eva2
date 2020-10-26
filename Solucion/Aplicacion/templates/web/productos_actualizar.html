@@ -1,0 +1,41 @@
+{% extends "web/plantilla.html" %} {% load static %} {% block titulo %} Registro de productos {% endblock titulo %} {% block estilos %}
+<link rel="stylesheet" href="{% static 'css/estilo_formulario.css' %}"> {% endblock estilos %} {% block contenido %}
+<!--JavaScripts-->
+<script src="{% static 'js/producto.js' %}"></script>
+<script>
+    function ir() {
+        location.href = '/lista_productos/';
+    }
+</script>
+<!--formulario-->
+<form action="{% url 'MODIFICARP' %}" method="POST" class="formulario-registro" onsubmit="">
+    {% csrf_token %}
+    <h1 class="formulario-titulo">Modificacion de productos</h1>
+
+    <div class="contenido">
+        <div class="dato">
+            <p>Nombre:</p>
+            <input type="text" id="txtNombre" name="txtNombre" minlength="3" maxlength="120"  value="{{producto.nombre}}" required>
+        </div>
+        <div class="dato">
+            <p>Precio:</p>
+            <input type="number" id="txtPrecio" name="txtPrecio" placeholder="" min="1" value="{{producto.precio}}" required>
+        </div>
+        <div class="dato">
+            <p>Descripcion:</p>
+            <textarea name="txtDescripcion" id="txtDescripcion" cols="30" rows="10" minlength="3" maxlength="200" placeholder="Opcional">{{producto.descripcion}}</textarea>
+        </div>
+        <div class="dato">
+            <p>Stock:</p>
+            <input type="number" name="txtStock" id="txtStock" name="txtStock" value="{{producto.stock}}" required>
+        </div>
+
+        <input type="submit" value="Modificar" class="btn">
+        <input type="button" onclick="ir()" value="Admin Producto" class="btn">
+
+    </div>
+</form>
+<div style="text-align: center; color: red;">
+    <h2>{{msg}}</h2>
+</div>
+{% endblock contenido %}

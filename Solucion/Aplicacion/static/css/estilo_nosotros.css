@@ -1,0 +1,274 @@
+/*Estilos de header, navbar y footer */
+
+@import url(header_navbar_footer.css);
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    margin-top: 10px;
+    padding: 20px;
+    text-align: center;
+    background-color: rgb(68, 66, 66);
+    color: white;
+}
+
+
+/*Pantalla Escritorio*/
+
+@media screen and (min-width:780px) and (max-width:2000px) {
+    /*Estilo del Contenido central*/
+    /*Quienes somos y nuestra mision*/
+    /*quienes somos*/
+    .quienes_somos {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 40px;
+        border-radius: 4px;
+        border: 1px solid #eee;
+        background-color: #fafafa9c;
+    }
+    .quienes_somos img {
+        flex: 40%;
+        padding: 20px;
+    }
+    .quienes_somos p {
+        flex: 40%;
+        font-size: 20px;
+        padding: 20px;
+    }
+    /*Nuestra mision y vision*/
+    .mision_vision {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 40px;
+        border-radius: 4px;
+        border: 1px solid #eee;
+        background-color: #fafafa9c;
+    }
+    .mision_vision img {
+        flex: 40%;
+        padding: 20px;
+    }
+    .mision_vision p {
+        flex: 40%;
+        font-size: 20px;
+        padding: 20px;
+    }
+    /*datos*/
+    .telefono {
+        text-align: left;
+        margin: 20px;
+        padding: 20px;
+        width: 300px;
+        border-radius: 4px;
+        border: 1px solid #eee;
+        background-color: #fafafa9c;
+    }
+    .correo {
+        text-align: left;
+        margin: 20px;
+        padding: 20px;
+        width: 300px;
+        border-radius: 4px;
+        border: 1px solid #eee;
+        background-color: #fafafa9c;
+    }
+    .direcciones {
+        text-align: left;
+        margin: 20px;
+        padding: 20px;
+        width: 500px;
+        border-radius: 4px;
+        border: 1px solid #eee;
+        background-color: #fafafa9c;
+    }
+    /*Mapa*/
+    .mapa {
+        width: 600px;
+        margin: 20px;
+        padding: 20px;
+        border-radius: 4px;
+        border: 1px solid #eee;
+        background-color: #fafafa9c;
+    }
+}
+
+
+/*Pantalla tablet*/
+
+@media screen and (min-width:480px) and (max-width:780px) {
+    /*Estilo del Contenido central*/
+    /*Quienes somos y nuestra mision*/
+    /*quienes somos*/
+    .quienes_somos {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 40px;
+        border-radius: 4px;
+        border: 1px solid #eee;
+        background-color: #fafafa9c;
+    }
+    .quienes_somos img {
+        flex: 40%;
+        padding: 20px;
+        width: 80%;
+        height: auto;
+    }
+    .quienes_somos p {
+        flex: 40%;
+        font-size: 20px;
+        padding: 20px;
+    }
+    /*Nuestra mision y vision*/
+    .mision_vision {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 40px;
+        border-radius: 4px;
+        border: 1px solid #eee;
+        background-color: #fafafa9c;
+    }
+    .mision_vision img {
+        flex: 40%;
+        padding: 20px;
+        width: 80%;
+        height: auto;
+    }
+    .mision_vision p {
+        flex: 40%;
+        font-size: 20px;
+        padding: 20px;
+    }
+    /*datos*/
+    .telefono {
+        text-align: left;
+        margin: 20px;
+        padding: 20px;
+        width: 300px;
+        border-radius: 4px;
+        border: 1px solid #eee;
+        background-color: #fafafa;
+    }
+    .correo {
+        text-align: left;
+        margin: 20px;
+        padding: 20px;
+        width: 300px;
+        border-radius: 4px;
+        border: 1px solid #eee;
+        background-color: #fafafa;
+    }
+    .direcciones {
+        text-align: left;
+        margin: 20px;
+        padding: 20px;
+        width: 500px;
+        border-radius: 4px;
+        border: 1px solid #eee;
+        background-color: #fafafa;
+    }
+    /*Mapa*/
+    #mapita {
+        width: 350px;
+        height: 350px;
+    }
+    .mapa {
+        width: 350px;
+        margin: 20px;
+        padding: 20px;
+        border-radius: 4px;
+        border: 1px solid #eee;
+        background-color: #fafafa;
+    }
+}
+
+
+/*Pantalla novil*/
+
+@media screen and (max-width:480px) {
+    /*Estilo del Contenido central*/
+    /*Quienes somos y nuestra mision*/
+    /*quienes somos*/
+    .quienes_somos {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 40px;
+        border-radius: 4px;
+        border: 1px solid #eee;
+        background-color: #fafafa9c;
+    }
+    .quienes_somos img {
+        flex: 40%;
+        padding: 20px;
+        width: 80%;
+        height: auto;
+    }
+    .quienes_somos p {
+        flex: 40%;
+        font-size: 20px;
+        padding: 20px;
+    }
+    /*Nuestra mision y vision*/
+    .mision_vision {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 40px;
+        border-radius: 4px;
+        border: 1px solid #eee;
+        background-color: #fafafa9c;
+    }
+    .mision_vision img {
+        flex: 40%;
+        padding: 20px;
+        width: 80%;
+        height: auto;
+    }
+    .mision_vision p {
+        flex: 40%;
+        font-size: 20px;
+        padding: 20px;
+    }
+    /*datos*/
+    .telefono {
+        text-align: left;
+        margin: 20px;
+        padding: 20px;
+        width: 265px;
+        border-radius: 4px;
+        border: 1px solid #eee;
+        background-color: #fafafa;
+    }
+    .correo {
+        text-align: left;
+        margin: 20px;
+        padding: 20px;
+        width: 265px;
+        border-radius: 4px;
+        border: 1px solid #eee;
+        background-color: #fafafa;
+    }
+    .direcciones {
+        text-align: left;
+        margin: 20px;
+        padding: 20px;
+        width: 265px;
+        border-radius: 4px;
+        border: 1px solid #eee;
+        background-color: #fafafa;
+    }
+    /*Mapa*/
+    #mapita {
+        width: 265px;
+        height: 265px;
+    }
+    .mapa {
+        width: 265px;
+        margin: 20px;
+        padding: 20px;
+        border-radius: 4px;
+        border: 1px solid #eee;
+        background-color: #fafafa;
+    }
+}

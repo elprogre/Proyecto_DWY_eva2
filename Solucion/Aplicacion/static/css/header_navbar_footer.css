@@ -1,0 +1,285 @@
+/*Estilo cabecera*/
+
+.header {
+    margin: auto;
+    /*Ajustar margen al centro*/
+    text-align: center;
+    padding-bottom: 10px;
+    color: #4f9deb;
+    font-family: Arial, Helvetica, sans-serif;
+    text-shadow: 2px 2px #1d63a8;
+}
+
+.header img {
+    /*Tamaño logo*/
+    height: 200px;
+    width: 200px;
+}
+
+
+/*Estilo Barra de navegacion en general*/
+
+.navbar {
+    width: 100%;
+    background-color: rgb(68, 66, 66);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+#btn-menu {
+    display: none;
+}
+
+.navbar label {
+    display: none;
+    width: 30px;
+    height: 30px;
+    padding: 10px;
+    border-right: 1px solid white;
+}
+
+.navbar label:hover {
+    cursor: pointer;
+    background-color: #4f9deb;
+}
+
+.menu ul {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+.menu li {
+    text-align: center;
+    flex-grow: 1;
+    border-right: 1px solid white;
+}
+
+.menu li:hover {
+    transition-duration: 0.7s;
+    background: #4f9deb;
+}
+
+.menu li a {
+    display: block;
+    padding: 20px;
+    color: white;
+    text-decoration: none;
+}
+
+
+/*Pantalla Escritorio*/
+
+@media screen and (min-width:780px) and (max-width:2000px) {
+    /*Estilo de Bienvenido*/
+    .header .Bienvenido {
+        position: absolute;
+        height: 80px;
+        width: 250px;
+        border-radius: 20px;
+        background-color: rgb(68, 66, 66);
+    }
+    .Bienvenido p {
+        font-size: 15px;
+        padding-top: 25px;
+        color: white;
+        text-shadow: none;
+    }
+    /*Estilo del Pie de Pagina */
+    .footer {
+        display: flex;
+    }
+    .footer h3 {
+        padding-bottom: 12px;
+    }
+    .footer p {
+        padding-bottom: 6px;
+    }
+    .footer li {
+        padding-bottom: 10px;
+    }
+    .contactos {
+        flex: 25%;
+        padding: 50px;
+        background-color: rgb(68, 66, 66);
+        color: white;
+    }
+    .direccion {
+        flex: 25%;
+        padding: 50px;
+        background-color: rgb(68, 66, 66);
+        color: white;
+    }
+    .horario {
+        text-align: center;
+        flex: 25%;
+        padding: 50px;
+        background-color: rgb(68, 66, 66);
+        color: white;
+    }
+    .desarrollador {
+        text-align: right;
+        flex: 25%;
+        padding: 50px;
+        background-color: rgb(68, 66, 66);
+        color: white;
+    }
+    .desarrollador a {
+        text-decoration: none;
+        color: white;
+    }
+}
+
+
+/*Pantalla Tablet*/
+
+@media screen and (min-width:480px) and (max-width:780px) {
+    /*Estilo de Bienvenido*/
+    .header .Bienvenido {
+        background-color: rgb(68, 66, 66);
+    }
+    .Bienvenido p {
+        font-size: 15px;
+        padding: 10px;
+        color: white;
+        text-shadow: none;
+    }
+    /*Barra de navegacion*/
+    .navbar {
+        display: block;
+    }
+    .navbar label {
+        display: block;
+    }
+    .menu {
+        position: absolute;
+        background-color: rgb(68, 66, 66);
+        width: 70%;
+        margin-left: -70%;
+        transition: all 0.5s;
+    }
+    .menu ul {
+        flex-direction: column;
+    }
+    .menu li {
+        border-top: 1px solid white;
+    }
+    #btn-menu:checked~.menu {
+        margin: 0px;
+    }
+    /*Estilo del Pie de Pagina */
+    .footer {
+        background-color: rgb(68, 66, 66);
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .footer h3 {
+        padding: 4%;
+    }
+    .footer p {
+        padding: 2%;
+    }
+    .contactos {
+        flex: 50%;
+        background-color: rgb(68, 66, 66);
+        color: white;
+    }
+    .direccion {
+        display: none;
+        flex: 50%;
+        background-color: rgb(68, 66, 66);
+        color: white;
+    }
+    .horario {
+        text-align: center;
+        flex: 50%;
+        background-color: rgb(68, 66, 66);
+        color: white;
+    }
+    .desarrollador {
+        flex: 100%;
+        background-color: rgb(68, 66, 66);
+        color: white;
+    }
+    .desarrollador a {
+        text-decoration: none;
+        color: white;
+    }
+}
+
+
+/*Pantalla Movil*/
+
+@media screen and (max-width:480px) {
+    /*Estilo de Bienvenido*/
+    .header .Bienvenido {
+        background-color: rgb(68, 66, 66);
+    }
+    .Bienvenido p {
+        font-size: 15px;
+        padding: 10px;
+        color: white;
+        text-shadow: none;
+    }
+    /*Barra de navegacion*/
+    .navbar {
+        display: block;
+    }
+    .navbar label {
+        display: block;
+    }
+    .menu {
+        position: absolute;
+        background-color: rgb(68, 66, 66);
+        width: 70%;
+        margin-left: -70%;
+        transition: all 0.5s;
+    }
+    .menu ul {
+        flex-direction: column;
+    }
+    .menu li {
+        border-top: 1px solid white;
+    }
+    #btn-menu:checked~.menu {
+        margin: 0px;
+    }
+    /*Estilo del Pie de Pagina */
+    .footer {
+        display: flex;
+        flex-wrap: wrap;
+        font-size: small;
+    }
+    .footer h3 {
+        padding: 4%;
+    }
+    .footer p {
+        padding: 2%;
+    }
+    .contactos {
+        flex: 50%;
+        background-color: rgb(68, 66, 66);
+        color: white;
+    }
+    .direccion {
+        display: none;
+        flex: 50%;
+        background-color: rgb(68, 66, 66);
+        color: white;
+    }
+    .horario {
+        text-align: center;
+        flex: 50%;
+        background-color: rgb(68, 66, 66);
+        color: white;
+    }
+    .desarrollador {
+        flex: 50%;
+        background-color: rgb(68, 66, 66);
+        color: white;
+    }
+    .desarrollador a {
+        text-decoration: none;
+        color: white;
+    }
+}
