@@ -58,62 +58,6 @@
 }
 
 
-/*Estilos para la tabla de administrar productos*/
-
-.formulario-producto .btn-2 {
-    margin: 10px;
-    padding: 10px;
-    background-color: rgb(68, 66, 66);
-    color: white;
-    border: none;
-}
-
-.formulario-producto .btn-2:hover {
-    background-color: #4f9deb;
-    color: black;
-    cursor: pointer;
-    transition-duration: 0.7s;
-}
-
-table {
-    font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
-    font-size: 12px;
-    width: 100%;
-    text-align: left;
-    border-collapse: collapse;
-}
-
-th {
-    font-size: 13px;
-    font-weight: normal;
-    padding: 7px;
-    background: rgb(68, 66, 66);
-    border-bottom: 1px solid #fff;
-    color: white;
-}
-
-td {
-    padding: 7px;
-    background: #e8edff;
-    border-bottom: 1px solid #fff;
-    color: #669;
-    border-top: 1px solid transparent;
-}
-
-tr:hover td {
-    background: #d0dafd;
-    color: #339;
-}
-
-h1 {
-    margin-top: 10px;
-    padding: 20px;
-    text-align: center;
-    background-color: rgb(68, 66, 66);
-    color: white;
-}
-
-
 /*Responsive*/
 
 
@@ -127,6 +71,53 @@ h1 {
     .formulario-producto {
         padding: 40px;
     }
+    /*Estilos para la tabla de administrar productos*/
+    .formulario-producto .btn-2 {
+        margin: 10px;
+        padding: 10px;
+        background-color: rgb(68, 66, 66);
+        color: white;
+        border: none;
+    }
+    .formulario-producto .btn-2:hover {
+        background-color: #4f9deb;
+        color: black;
+        cursor: pointer;
+        transition-duration: 0.7s;
+    }
+    table {
+        font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+        font-size: 12px;
+        width: 100%;
+        text-align: left;
+        border-collapse: collapse;
+    }
+    th {
+        font-size: 13px;
+        font-weight: normal;
+        padding: 7px;
+        background: rgb(68, 66, 66);
+        border-bottom: 1px solid #fff;
+        color: white;
+    }
+    td {
+        padding: 7px;
+        background: #e8edff;
+        border-bottom: 1px solid #fff;
+        color: #669;
+        border-top: 1px solid transparent;
+    }
+    tr:hover td {
+        background: #d0dafd;
+        color: #339;
+    }
+    h1 {
+        margin-top: 10px;
+        padding: 20px;
+        text-align: center;
+        background-color: rgb(68, 66, 66);
+        color: white;
+    }
 }
 
 
@@ -137,6 +128,53 @@ h1 {
         width: 50%;
         height: 80%;
     }
+    /*Estilos para la tabla de administrar productos*/
+    .formulario-producto .btn-2 {
+        margin: 6px;
+        padding: 6px;
+        background-color: rgb(68, 66, 66);
+        color: white;
+        border: none;
+    }
+    .formulario-producto .btn-2:hover {
+        background-color: #4f9deb;
+        color: black;
+        cursor: pointer;
+        transition-duration: 0.7s;
+    }
+    table {
+        font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+        font-size: 13px;
+        width: 100%;
+        text-align: left;
+        border-collapse: collapse;
+    }
+    th {
+        font-size: 13px;
+        font-weight: normal;
+        padding: 2px;
+        background: rgb(68, 66, 66);
+        border-bottom: 1px solid #fff;
+        color: white;
+    }
+    td {
+        padding: 2px;
+        background: #e8edff;
+        border-bottom: 1px solid #fff;
+        color: #669;
+        border-top: 1px solid transparent;
+    }
+    tr:hover td {
+        background: #d0dafd;
+        color: #339;
+    }
+    h1 {
+        margin-top: 10px;
+        padding: 20px;
+        text-align: center;
+        background-color: rgb(68, 66, 66);
+        color: white;
+    }
 }
 
 
@@ -146,5 +184,52 @@ h1 {
     .formulario-registro {
         width: 70%;
         height: 80%;
+    }
+    /*Estilos para la tabla de administrar productos*/
+    .formulario-producto .btn-2 {
+        margin: 6px;
+        padding: 6px;
+        background-color: rgb(68, 66, 66);
+        color: white;
+        border: none;
+    }
+    .formulario-producto .btn-2:hover {
+        background-color: #4f9deb;
+        color: black;
+        cursor: pointer;
+        transition-duration: 0.7s;
+    }
+    table {
+        font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+        font-size: 13px;
+        width: 100%;
+        text-align: left;
+        border-collapse: collapse;
+    }
+    th {
+        font-size: 13px;
+        font-weight: normal;
+        padding: 2px;
+        background: rgb(68, 66, 66);
+        border-bottom: 1px solid #fff;
+        color: white;
+    }
+    td {
+        padding: 2px;
+        background: #e8edff;
+        border-bottom: 1px solid #fff;
+        color: #669;
+        border-top: 1px solid transparent;
+    }
+    tr:hover td {
+        background: #d0dafd;
+        color: #339;
+    }
+    h1 {
+        margin-top: 10px;
+        padding: 20px;
+        text-align: center;
+        background-color: rgb(68, 66, 66);
+        color: white;
     }
 }
